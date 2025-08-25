@@ -8,4 +8,14 @@ offset_bottom = 295.0
 text = "botão"
 script = ExtResource("1_0fta5")
 
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionButton" type="OptionButton" parent="Control"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 20.0
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]
