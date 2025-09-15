@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvbbmhy3mrs1l"]
+
+[ext_resource type="Script" uid="uid://liovjkswxvdh" path="res://progress bar/progress_bar.gd" id="1_asqoj"]
+
+[node name="ProgressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_asqoj")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 34.0
+offset_right = 488.0
+offset_bottom = 110.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

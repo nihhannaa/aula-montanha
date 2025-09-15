@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://wfop1hpnlnen"]
+
+[ext_resource type="Script" uid="uid://37nk8uryewcc" path="res://atividade descolada 18/progressbar.gd" id="1_hy8pc"]
+[ext_resource type="Texture2D" uid="uid://bk7ssit2jbsr1" path="res://atividade descolada 18/4fc1b7eac45d22a6ddcf1d5bb127b6f5.png" id="2_ujnyy"]
+
+[node name="Progressbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 524.0
+offset_top = 331.0
+offset_right = 224.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hy8pc")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.602
+anchor_top = -0.799
+anchor_right = 0.731
+anchor_bottom = 0.773
+offset_left = 55.9041
+offset_top = 52.796
+offset_right = -79.812
+offset_bottom = 417.708
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+fill_mode = 4
+texture_under = ExtResource("2_ujnyy")
+texture_progress = ExtResource("2_ujnyy")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.5
+offset_top = -68.5
+offset_right = 28.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.605
+anchor_top = -0.792
+anchor_right = 0.741
+anchor_bottom = 0.701
+offset_left = 648.46
+offset_top = 159.968
+offset_right = -219.332
+offset_bottom = -288.204
+theme_override_font_sizes/font_size = 50
+text = "clique"
+
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
